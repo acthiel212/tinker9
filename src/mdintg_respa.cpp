@@ -38,6 +38,8 @@ const TimeScaleConfig& respa_tsconfig()
 
       {"echgtrn", slow},       {"edisp", slow},         {"erepel", slow},
       {"ehippo", slow},
+
+      {"egkdisp", slow}
    };
    return tsconfig;
 }

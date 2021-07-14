@@ -176,6 +176,9 @@ void x_analyze_e()
    if (use_potent(chgtrn_term))
       print(out, fmt, "Charge Transfer", energy_ect, count_reduce(nct));
 
+   if (use_potent(solv_term))
+      print(out, fmt, "Implicit Solvation", energy_ewca, 0);
+
    if (use_potent(geom_term))
       print(out, fmt, "Geometric Restraints", energy_eg,
             count_bonded_term(geom_term));

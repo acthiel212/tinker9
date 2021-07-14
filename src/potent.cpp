@@ -93,6 +93,10 @@ int use_potent(potent_t term)
       val = potent::use_repuls;
       break;
 
+   case solv_term:
+      val = potent::use_solv;
+      break;
+
    default:
       assert(false);
       break;

@@ -66,6 +66,8 @@ void energy_data(rc_op op)
    rc_man erepel42{erepel_data, op};
    rc_man edisp42{edisp_data, op};
 
+   rc_man egkdisp42{egkdisp_data, op};
+
    // Must call fft_data() after all of the electrostatics routines.
    rc_man fft42{fft_data, op};
 }
@@ -123,6 +125,8 @@ const TimeScaleConfig& default_tsconfig()
 
       {"echgtrn", 0},       {"edisp", 0},         {"erepel", 0},
       {"ehippo", 0},
+
+      {"egkdisp", 0}
    };
    return tsconfig;
 }
@@ -263,6 +267,9 @@ void energy_core(int vers, unsigned tsflag, const TimeScaleConfig& tsconfig)
       if (tscfg("erepel", ecore_vdw))
          erepel(vers);
 
+   if (use_potent(solv_term))
+      if (tscfg("egkdisp", ecore_vdw))
+         egkdisp(vers);
 
    pme_stream_finish_wait(use_pme_stream and not(vers & calc::analyz));
 }

@@ -17,6 +17,7 @@ echglj.cpp
 echgtrn.cpp
 edisp.cpp
 egeom.cpp
+egkdisp.cpp
 eimprop.cpp
 eimptor.cpp
 elec.cpp

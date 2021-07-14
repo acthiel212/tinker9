@@ -1,5 +1,7 @@
 include/*template
 
+cmake-build-debug
+
 # Wiki
 *.wiki
 *.wiki/*

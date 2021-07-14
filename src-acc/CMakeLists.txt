@@ -33,6 +33,7 @@ echarge_acc.cpp
 echgtrn_acc.cpp
 edisp_acc.cpp
 egeom_acc.cpp
+egkdisp_acc.cpp
 ehal_acc.cpp
 eimprop_acc.cpp
 eimptor_acc.cpp
